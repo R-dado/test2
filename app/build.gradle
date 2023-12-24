@@ -4,7 +4,7 @@ plugins {
 }
 
 cyclonedxBom {
-    includeConfigs = ["CompileClasspath"]
+    includeConfigs = []
     projectType = "application"
     schemaVersion = "1.5"
     destination = file("build/reports")
