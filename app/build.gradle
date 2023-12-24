@@ -3,16 +3,6 @@ plugins {
     id 'com.android.application'
 }
 
-cyclonedxBom {
-    includeConfigs = ["runtimeClasspath", "compileClasspath"]
-    projectType = "application"
-    schemaVersion = "1.5"
-    destination = file("build/reports")
-    outputName = "bom"
-    outputFormat = "all"
-    includeBomSerialNumber = true
-    componentVersion = "2.0.0"
-}
 
 android {
     compileSdkVersion 33
