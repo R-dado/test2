@@ -4,6 +4,7 @@ plugins {
 }
 
 cyclonedxBom {
+    includeConfigs = ["releaseCompileClasspath"]
     projectType = "application"
     schemaVersion = "1.5"
     destination = file("build/reports")
@@ -33,21 +34,7 @@ android {
     namespace 'com.halil.ozel.bluetoothchatapp'
 }
 
-def cycloneDxConfiguration = null
-
-tasks.withType(org.cyclonedx.gradle.CycloneDxTask) {
-    setIncludeConfigs(['releaseCompileClasspath'])
-}
-
-def initCycloneDxConfig() {
-    if (gradle.startParameter.taskNames.contains("cyclonedxBom")) {
-        cycloneDxConfiguration = "default"
-    }
-}
-
 dependencies {
-    initCycloneDxConfig()
-    implementation(project(path: ':app', configuration: cycloneDxConfiguration))
     
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
