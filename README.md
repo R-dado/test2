@@ -1,4 +1,4 @@
-# Android Bluetooth 🌐 Chat 💬 App 📱
+# Android Bluetooth 🌐 Chat 💬 App 📱 
 
 Android Bluetooth Chat application is an application written in Java programming language. It's a project created by synchronizing with chat to learn the Bluetooth structure.
 
